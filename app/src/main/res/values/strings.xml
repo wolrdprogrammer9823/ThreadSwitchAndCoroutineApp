@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ThreadSwitchAndCoroutineApp</string>
+    <string name="to_login">to_login</string>
+    <string name="to_main">to_main</string>
 </resources>

@@ -2,12 +2,17 @@ package com.wolfsea.threadswitchandcoroutineapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.wolfsea.threadswitchandcoroutineapp.flowdemo.Util
 import com.wolfsea.threadswitchandcoroutineapp.usecase.AccountManagerImpl
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.ObservableOnSubscribe
 import io.reactivex.rxjava3.functions.Consumer
 import io.reactivex.rxjava3.schedulers.Schedulers
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 
 
 class LoginActivity : AppCompatActivity() {
@@ -46,6 +51,9 @@ class LoginActivity : AppCompatActivity() {
                 .subscribe {
                     Log.d("value","mapValue:$it")
                 }
+
+
+
     }
 
     private fun clickLogin() {
@@ -78,5 +86,4 @@ class LoginActivity : AppCompatActivity() {
             it.onNext(value)
         }
     }
-
 }

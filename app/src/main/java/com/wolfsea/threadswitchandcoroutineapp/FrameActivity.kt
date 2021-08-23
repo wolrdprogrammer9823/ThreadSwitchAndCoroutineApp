@@ -36,6 +36,16 @@ class FrameActivity : AppCompatActivity() {
             startActivity<MainActivity>()
         }
 
+        to_table_layout.setOnClickListener {
+
+            startActivity<TableLayoutActivity>()
+        }
+
+        to_bsd_fragment.setOnClickListener {
+
+            startActivity<BottomSheetDialogFragmentActivity>()
+        }
+
     }
 
     private fun method1() {
@@ -43,7 +53,7 @@ class FrameActivity : AppCompatActivity() {
 
             val dataSource = createDataSet()
 
-            val result = async(Dispatchers.IO) {
+            val result = async(Dispatchers.Default) {
 
                 val dataMap = mutableMapOf<String, MutableList<String>>()
 
@@ -94,7 +104,7 @@ class FrameActivity : AppCompatActivity() {
     }
 
 
-    private suspend fun createDataSet(): MutableList<String> = withContext(Dispatchers.IO) {
+    private suspend fun createDataSet(): MutableList<String> = withContext(Dispatchers.Default) {
         val dataSource = mutableListOf<String>()
         dataSource.add("a11122")
         dataSource.add("a11122-001")
@@ -109,7 +119,7 @@ class FrameActivity : AppCompatActivity() {
     }
 
     private suspend fun getDataMap(dataSource: MutableList<String>): MutableMap<String, MutableList<String>> =
-        withContext(Dispatchers.IO) {
+        withContext(Dispatchers.Default) {
 
             val dataMap = mutableMapOf<String, MutableList<String>>()
 

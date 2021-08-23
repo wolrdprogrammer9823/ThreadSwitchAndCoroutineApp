@@ -12,7 +12,8 @@
 
         <activity
             android:name=".FrameActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,17 +21,23 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".LoginActivity"/>
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="fullSensor"/>
 
-        <activity android:name=".MainActivity">
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="fullSensor"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
-        </activity>
+        <activity
+            android:name=".TableLayoutActivity"
+            android:exported="true"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".BottomSheetDialogFragmentActivity"
+            android:exported="true"
+            android:screenOrientation="fullSensor"/>
 
     </application>
 

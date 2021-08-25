@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LayerInfoTableView">
+        <attr name="head_bg" format="color"/>
+        <attr name="border" format="dimension"/>
+        <attr name="head_height" format="dimension"/>
+        <attr name="content_height" format="dimension"/>
+    </declare-styleable>
+</resources>

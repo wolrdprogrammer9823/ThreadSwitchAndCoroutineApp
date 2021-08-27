@@ -102,11 +102,11 @@ class LayerTableInfoView(context: Context, attributeSet: AttributeSet) : Relativ
              * 画分割线(横线)
              * */
             for (j in 1..row!!) {
-                val startY = contentHeight.times(j) + headerHeight
-                //最后一行的线条需要加减线宽的一半值以及0.5F.主要是因为canvas绘制线条是中间向两边绘制的,渲染时不支持
-                //小于0.5像素.
-                val top = if (j == row) startY - borderWidth.div(2) - 0.5F else startY
-                val bottom = if (j == row) startY + borderWidth.div(2) + 0.5F else startY
+                val startY = contentHeight.times(j) + headerHeight + borderWidth.div(2)
+                //最后一行的线条需要加减线宽以及1.0F.主要是因为canvas绘制线条是中间向两边绘制的,渲染时不支持
+                //小于0.5像素和更正线条粗细误差.
+                val top = if (j == row) startY - borderWidth - 1.0F else startY
+                val bottom = if (j == row) startY + borderWidth + 1.0F else startY
                 drawRect(
                     0F,
                     top,

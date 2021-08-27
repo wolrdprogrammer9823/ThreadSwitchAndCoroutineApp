@@ -72,9 +72,9 @@ class LayerTableInfoView(context: Context, attributeSet: AttributeSet) : Relativ
             /*
              * 画分割线(竖线)
              * */
-            for (i in 1..2) {
+            for (i in 1 until col) {
                 val startX = cellWidth.times(i) + borderWidth.div(2)
-                drawLine(
+                drawRect(
                     startX,
                     0F,
                     startX,
@@ -85,10 +85,14 @@ class LayerTableInfoView(context: Context, attributeSet: AttributeSet) : Relativ
 
             for (i in 0..col) {
                 val startX = cellWidth.times(i) + borderWidth.div(2)
-                drawLine(
-                    startX,
+                //最后一列的线条绘制需要加减线宽的一半值以及0.5F.主要是因为canvas绘制线条是中间向两边绘制的,渲染时不
+                //支持小于0.5像素.
+                val left = if (i == col) startX - borderWidth.div(2) - 0.5F else startX
+                val right = if (i == col) startX + borderWidth.div(2) + 0.5F else startX
+                drawRect(
+                    left,
                     headerHeight,
-                    startX,
+                    right,
                     height.toFloat(),
                     linePaint
                 )
@@ -99,11 +103,15 @@ class LayerTableInfoView(context: Context, attributeSet: AttributeSet) : Relativ
              * */
             for (j in 1..row!!) {
                 val startY = contentHeight.times(j) + headerHeight
-                drawLine(
+                //最后一行的线条需要加减线宽的一半值以及0.5F.主要是因为canvas绘制线条是中间向两边绘制的,渲染时不支持
+                //小于0.5像素.
+                val top = if (j == row) startY - borderWidth.div(2) - 0.5F else startY
+                val bottom = if (j == row) startY + borderWidth.div(2) + 0.5F else startY
+                drawRect(
                     0F,
-                    startY,
+                    top,
                     width.toFloat(),
-                    startY,
+                    bottom,
                     linePaint)
             }
 

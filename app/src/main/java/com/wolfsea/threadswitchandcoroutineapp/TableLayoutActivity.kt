@@ -12,5 +12,7 @@ class TableLayoutActivity : AppCompatActivity() {
         setContentView(R.layout.activity_table_layout)
 
         table_view.setData(BinObj())
+
+        table_list_view.setData(BinObj())
     }
 }

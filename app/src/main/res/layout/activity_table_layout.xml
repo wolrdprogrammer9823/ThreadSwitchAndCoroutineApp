@@ -18,4 +18,14 @@
         app:border="@dimen/dp_1"
         app:head_height="@dimen/dp_30"
         app:content_height="@dimen/dp_20"/>
+
+    <com.wolfsea.threadswitchandcoroutineapp.defineview.TableListInfoView
+        android:id="@+id/table_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_45"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        app:content_height="@dimen/dp_20"/>
+
 </androidx.appcompat.widget.LinearLayoutCompat>

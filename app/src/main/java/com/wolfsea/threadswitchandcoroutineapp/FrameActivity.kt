@@ -50,6 +50,11 @@ class FrameActivity : AppCompatActivity() {
 
             startActivity<GridLayoutActivity>()
         }
+
+        to_define_grid_layout.setOnClickListener {
+
+            startActivity<DefineGridLayoutActivity>()
+        }
     }
 
     private fun method1() {

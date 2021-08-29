@@ -5,6 +5,7 @@
     <string name="to_table_layout">to_table_layout</string>
     <string name="to_bsd_fragment">to_bsd_fragment</string>
     <string name="to_grid_layout">to_grid_layout</string>
+    <string name="to_define_grid_layout">to_define_grid_layout</string>
     <string name="title_activity_bottom_sheet_dialog_fragment">BottomSheetDialogFragmentActivity</string>
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -18,4 +19,6 @@
     <string name="text_two">Text Two</string>
     <string name="text_three">Text Three</string>
     <string name="text_four">Text Four</string>
+    <string name="channel_tip">点击增删频道，长按拖拽排序</string>
+    <string name="channel_manager">频道管理</string>
 </resources>

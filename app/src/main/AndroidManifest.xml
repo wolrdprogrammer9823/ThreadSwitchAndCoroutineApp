@@ -9,40 +9,38 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ThreadSwitchAndCoroutineApp">
-
         <activity
             android:name=".FrameActivity"
             android:exported="true"
             android:screenOrientation="fullSensor">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".LoginActivity"
-            android:screenOrientation="fullSensor"/>
-
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="fullSensor"/>
-
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".TableLayoutActivity"
             android:exported="true"
-            android:screenOrientation="fullSensor"/>
-
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".BottomSheetDialogFragmentActivity"
             android:exported="true"
-            android:screenOrientation="fullSensor"/>
-
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".GridLayoutActivity"
             android:exported="true"
-            android:screenOrientation="fullSensor"/>
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".DefineGridLayoutActivity"
+            android:exported="true"
+            android:screenOrientation="fullSensor" />
     </application>
 
 </manifest>

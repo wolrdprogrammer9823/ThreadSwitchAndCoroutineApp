@@ -46,6 +46,10 @@ class FrameActivity : AppCompatActivity() {
             startActivity<BottomSheetDialogFragmentActivity>()
         }
 
+        to_grid_layout.setOnClickListener {
+
+            startActivity<GridLayoutActivity>()
+        }
     }
 
     private fun method1() {

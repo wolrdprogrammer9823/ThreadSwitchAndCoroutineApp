@@ -57,4 +57,17 @@
         android:text="@string/to_bsd_fragment"
         android:textAllCaps="false"/>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/to_grid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/table_background"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/to_bsd_fragment"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/to_grid_layout"
+        android:textAllCaps="false"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
